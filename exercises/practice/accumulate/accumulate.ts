@@ -1,3 +1,7 @@
-export function accumulate(list: unknown, accumulator: unknown): never {
-  throw new Error('Remove this statement and implement this function')
+export function accumulate(list: [unknown], accumulator: (a: unknown) => unknown): list[unknown] {
+  const newlist = []
+  for (const i of list) {
+    newlist.push(accumulator(i))
+  }
+  return newlist
 }
