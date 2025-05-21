@@ -1,3 +1,5 @@
-export function parse(phrase: string): unknown {
-  throw new Error('Remove this statement and implement this function')
+export function parse(phrase: string): string {
+  return phrase.split(" ").reduce((acronym: string, s: string) => {
+    return acronym + s.charAt(0).toUpperCase()
+  }, "")
 }
